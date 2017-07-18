@@ -1,0 +1,177 @@
+/* Pseudo elementy */
+#before .pierwszy::before {
+    content: "przed elementem ";
+    color: red;
+}
+
+#after .drugi::after {
+    content: " po elemencie";
+    color: green;
+}
+
+#first-letter p::first-letter {
+    color: red;
+    font-size: 30px;
+}
+
+#first-line p::first-line {
+    background-color: yellow;
+}
+
+/* Pseudo klasy */
+#link a:link {
+    color: orange;
+}
+
+#link a:visited {
+    color: pink;
+}
+
+#before:hover {
+    color: red;
+}
+
+#link a:active {
+    background-color: yellow;
+}
+
+#focus input:focus {
+    border: 5px solid green;
+}
+
+#link a:target {
+    background-color: orange;
+}
+
+/*
+div target {
+    background-color: orange;
+}
+*/
+
+#lang p:lang(en) {
+    background-color: aqua;
+}
+
+/* Inne pseudo klasy */
+#first-child .lista li:first-child {
+    background-color: green;
+}
+
+#first-child .lista li:last-child {
+    background-color: pink;
+}
+
+#only-child span:only-child {
+    background-color: red;
+}
+
+div:empty {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+
+/* nth-childy */
+#nth-childs ul li:nth:child(3) {
+    background-color: blue;
+}
+
+#nth-childs ul li:nth:child(odd) {
+    background-color: pink;
+}
+
+#nth-last-childs ul li:nth-last-child(3n+2) {
+    font-size: 30px;
+    background-color:  pink;
+}
+
+input[type="text"] {
+    border: 10px solid grey;
+}
+
+#attributes a[title*="opis"] {
+    font-size: 40px;
+}
+
+#attributes a[title*="link"] {
+    font-size: 40px;
+    background-color: yellow;
+}
+
+#attributes a[title^="opis"] {
+    font-size: 20px;
+    background-color: grey;
+}
+
+#attributes a[title$="linka"] {
+    font-size: 30px;
+    background-color: red;
+}
+
+/* Floating */
+#floating > div {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+}
+
+#floating .clear {
+    clear: both;
+}
+
+/* Tranzycje */
+#transitons .hovered {
+    width: 300px;
+    height: 300px;
+    background-color: grey;
+    transition: all 3s ease-in-out;
+}
+
+#transitions .hovered:hover {
+    background-color: green;
+}
+
+/* Właściwości tła */
+#background {
+    width: 600px;
+    height: 500px;
+    margin: 10px auto;
+    background-image: url('http://joemonster.org/i/2014/01/dogememe_08.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+/*    background-attachment: fixed;*/
+    background-size: contain; 
+    
+    background: url('http://joemonster.org/i/2014/01/dogememe_08.jpg') center center cover no-repeat;
+}
+
+/* Overflows */
+#overflow {
+    width: 300px;
+    height: 300px;
+    overflow: auto;
+}
+
+#overflow:hover {
+    overflow: visible;
+}
+
+#box-sizing {
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+    background-color: beige;
+    padding: 50px;
+    box-sizing: border-box;
+    border: 10px solid green;
+}
+
+/* Responsywność */
+@media all and (max-wdth: 800px) {
+    #box-sizing {
+        width: 150px;
+        height: 150px;
+    }
+}
